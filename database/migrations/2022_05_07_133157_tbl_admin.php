@@ -13,19 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('tbl_employee', function (Blueprint $table) { 
+        Schema::create('tbl_admin', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('password');
-            $table->string('mobile');
             $table->string('email');
-            $table->string('dept_id');
-            $table->timestamps();
-
-        });
-
-        Schema::table('tbl_employee', function (Blueprint $table) {
             $table->string('password');
+            $table->timestamps();
         });
     }
 
@@ -36,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::drop('tbl_employee');
+        Schema::drop('tbl_admin');
     }
 };

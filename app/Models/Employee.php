@@ -11,10 +11,12 @@ class Employee extends Model
 
     protected $table = 'tbl_employee';
 
-    protected $fillables = ['id', 'name', 'mobile', 'email', 'dept_id'];
+    protected $fillables = ['id', 'name', 'password','mobile', 'email', 'dept_id'];
 
-    protected $primartKey = 'id';
+    protected $primaryKey = 'id';
 
-    public $timestamps = true;
+    // public $timestamps = true;
+
+    protected $nullables = [ 'dept_id' ];
 
 }
